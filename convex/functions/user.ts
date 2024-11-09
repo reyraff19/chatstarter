@@ -45,7 +45,7 @@ export const remove = internalMutation({
   },
 });
 
-const getCurrentUser = async (ctx: QueryCtx | MutationCtx) => {
+export const getCurrentUser = async (ctx: QueryCtx | MutationCtx) => {
   const identity = await ctx.auth.getUserIdentity();
   if (!identity) {
     return null;
@@ -53,7 +53,7 @@ const getCurrentUser = async (ctx: QueryCtx | MutationCtx) => {
   return await getUserByClerkId(ctx, identity.subject);
 };
 
-const getUserByClerkId = async (
+export const getUserByClerkId = async (
   ctx: QueryCtx | MutationCtx,
   clerkId: string
 ) => {
