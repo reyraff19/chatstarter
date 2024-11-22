@@ -19,7 +19,7 @@ export function PendingFriendsList() {
       <h2 className="text-xs font-medium text-muted-foreground p-2.5">
         Pending Friends
       </h2>
-      {friends?.length === 0 && (
+      {friends??.length === 0 &&& (
         <FriendsListEmpty>
           You don't have any pending friend requests.
         </FriendsListEmpty>
