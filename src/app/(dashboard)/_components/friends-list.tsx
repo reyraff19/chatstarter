@@ -56,7 +56,7 @@ export function AcceptedFriendsList() {
       <h2 className="text-xs font-medium text-muted-foreground p-2.5">
         Accepted Friends
       </h2>
-      {friends?.length === 0 && (
+      {friends??.length === 0 &&& (
         <FriendsListEmpty>You don't have any friends yet.</FriendsListEmpty>
       )}
       {friends?.map((friend, index) => (
